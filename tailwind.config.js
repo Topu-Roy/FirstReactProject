@@ -5,7 +5,12 @@ module.exports = {
     "./public/*.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'Saira-Stencil-One' : 'Saira Stencil One',
+        'Poly' : 'Poly , sans',
+      }
+    },
   },
   plugins: [],
 }
