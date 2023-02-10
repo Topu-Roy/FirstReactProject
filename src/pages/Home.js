@@ -42,7 +42,7 @@ const Home = () => {
           <img
             src={HeroImage}
             alt="Hero Image"
-            className="lg:hidden translate-x-8 lg:translate-x-12 z-40 mask-image"
+            className="lg:hidden translate-x-8 lg:translate-x-12 z-30 mask-image"
           />
         </div>
 

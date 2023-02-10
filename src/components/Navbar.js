@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useContext} from 'react'
 import { Link } from 'react-router-dom'
 import HamMenu from '../assets/hambergermenu.png'
+import { AppContext } from '../App'
+
 
 const Navbar = () => {
+
+  
+  const {setIsExpended, isExpended} = useContext(AppContext)
+
   return (
-    <nav className="z-50 sticky top-0 left-0 flex items-center justify-between p-4 mt-2 sm:p-6 md:p-8">
+    <nav className="z-40 sticky top-0 left-0 flex items-center justify-between p-4 mt-2 sm:p-6 md:p-8">
       <span className="font-Saira-Stencil-One text-xl md:text-2xl xl:text-3xl text-slate-200 cursor-pointer">
         <Link to="/">TOPU</Link>
       </span>
@@ -30,11 +36,13 @@ const Navbar = () => {
         </button>
         <button
           className="md:hidden p-2 shadow rounded-full bg-[#00ECF9]"
-          type="button"
+          type="button" onClick={() => setIsExpended(!isExpended)}
         >
           <img src={HamMenu} alt="Menu" />
         </button>
       </div>
+
+
     </nav>
   )
 }

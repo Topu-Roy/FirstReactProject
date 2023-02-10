@@ -33,3 +33,10 @@
 .font-responsive-m {
     font-size: clamp(4rem, 8vw, 5rem);
 }
+
+.ham-menu-open{
+    @apply md:hidden fixed top-0 h-[100vh] w-[100vw] right-0 bg-gray-900 opacity-90 z-50 transition-all duration-200 ease-in-out
+}
+.ham-menu-close{
+    @apply md:hidden fixed top-0 h-[100vh] w-[100vw] right-[-200%] bg-gray-900 opacity-90 z-50 transition-all duration-200 ease-in-out
+}
